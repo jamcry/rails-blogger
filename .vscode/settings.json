@@ -1,0 +1,9 @@
+{
+    "editor.tabCompletion": "on",
+    "editor.fontWeight": "bold",
+    "editor.formatOnPaste": true,
+    "emmet.includeLanguages": {"erb":"html"},
+    "search.exclude": {
+        "**/node_modules": false
+    }
+}
