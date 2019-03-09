@@ -3,11 +3,14 @@ $primary_color: #AAA;
 body {
   background-color: $primary_color;
   font: {
-    family: Verdana, Helvetica, Arial;
-    size: 14px;
+    family: 'Libre Baskerville', serif, Verdana, Helvetica, Arial;
+    size: 16px;
   }
 }
 
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
 a {
   color: #0000FF;
   img {

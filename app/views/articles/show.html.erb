@@ -1,16 +1,21 @@
 <h1><%= @article.title %></h1>
-<%= link_to "<< Back to Articles List", articles_path %>
+<p><%= @article.body %></p>
+<br />
+<%= link_to "<< Back to Articles List", articles_path, class: 'new_article' %>
 <p>
-    Tags:
+    <b>Tags:</b>
     <% @article.tags.each do |tag| %>
         <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+    <% if @article.tags.empty? %>
+         <i>No tags yet</i>
     <% end %>
 </p>
 <% if @article.image.exists? %>
     <p><%= image_tag @article.image.url(:medium) %></p>
 <% end %>
 
-<p><%= @article.body %></p>
+
 <% if logged_in? %>
     <%= link_to "edit", edit_article_path(@article)%>
     <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Are you sure to delete this article?"} %>
